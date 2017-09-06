@@ -6,6 +6,7 @@ namespace Plating
     {
         public Bootstrapper()
         {
+            StaticConfiguration.DisableErrorTraces = false;
             Cassette.Nancy.CassetteNancyStartup.OptimizeOutput = true;
         }
     }
