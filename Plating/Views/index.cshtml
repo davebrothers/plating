@@ -2,10 +2,34 @@
 
 @inherits Nancy.ViewEngines.Razor.NancyRazorViewBase
 
-@{ 
+@{
     Layout = "Shared/_layout.cshtml";
 }
 
-<div>
-    
+<div class="jumbotron">
+    <div class="container">
+        <h2>
+            Plating
+        </h2>
+        <p>
+            Barcodes as a service.
+        </p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="col-md-6">
+        <h2>
+            How to use:
+        </h2>
+        <p>
+            Using the address bar of your browser:<br/>
+            Add <code>/barcode/{your content}</code> to the end of this page's URL, where {your content} is the text you would like encoded.<br/><br/>
+            For example: <a href="barcode/helloworld"><pre>plating.azurewebsites.net/barcode/helloworld</pre></a>
+        </p>
+    </div>
+
+    <div class="col-md-6">
+
+    </div>
 </div>

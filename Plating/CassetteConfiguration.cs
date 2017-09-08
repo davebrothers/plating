@@ -22,11 +22,8 @@ namespace Plating
                 Pattern = "*.min.css"
             };
 
-            //bundles.AddPerSubDirectory<ScriptBundle>(applicationRelativePath: "Content", fileSearch: scriptsFileSearch);
             bundles.Add<ScriptBundle>("Scripts", scriptsFiles);
             bundles.AddPerSubDirectory<StylesheetBundle>(applicationRelativePath: "Content", fileSearch: stylesFileSearch);
-            //bundles.AddPerIndividualFile<ScriptBundle>(applic: "Scripts", fileSearch: scriptsFileSearch);
-            //bundles.AddPerIndividualFile<StylesheetBundle>(directoryPath: "Content", fileSearch: stylesFileSearch);
         }
     }
 }
