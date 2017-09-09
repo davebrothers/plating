@@ -130,7 +130,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Barcoding\IBarcode.cs" />
     <Compile Include="Barcoding\Barcoder.cs" />
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="CassetteConfiguration.cs" />

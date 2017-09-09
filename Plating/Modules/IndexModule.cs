@@ -15,14 +15,6 @@ namespace Plating.Modules
                 return View["index"];
             };
 
-
-            //Get["barcode/{data}"] = _ =>
-            //{
-            //    var barcoder = new Barcoder();
-            //    MemoryStream stream = barcoder.WriteArray(_.data);
-            //    return Response.FromByteArray(stream.GetBuffer(), "image/png");
-            //};
-
             Get["barcode/{data}/{format?code128}"] = _ =>
             {
                 string format = _.format;
