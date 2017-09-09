@@ -103,7 +103,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="icon.png" />
+    <Content Include="Content\icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Content\CSS\bootstrap-theme.css" />
     <Content Include="Content\CSS\bootstrap-theme.min.css" />
     <Content Include="Content\CSS\bootstrap.css" />

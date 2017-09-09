@@ -12,25 +12,38 @@ namespace Plating.Barcoding
     {
         private BarcodeWriter _writer;
 
-        public Barcoder()
+        public Barcoder(string format = "code128", int height = 150, int width = 200)
         {
             _writer = new BarcodeWriter
             {
-                Format = BarcodeFormat.CODE_128,
+                Format = TypeFormat(format),
                 Options = new EncodingOptions
                 {
-                    Height = 150,
+                    Height = height,
                     PureBarcode = false,
-                    Width = 200
+                    Width = width
                 }
             };
         }
 
-        public void WriteArray(string data, MemoryStream stream)
+        public MemoryStream WriteArray(string data)
         {
+            var stream = new MemoryStream();
             _writer
                 .Write(data)
                 .Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+            return stream;
+        }
+
+        private BarcodeFormat TypeFormat(string format)
+        {
+            switch (format.ToLower())
+            {
+                case "qr":
+                    return BarcodeFormat.QR_CODE;
+                default:
+                    return BarcodeFormat.CODE_128;
+            }
         }
     }
 }

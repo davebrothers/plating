@@ -8,9 +8,9 @@
 
 <div class="jumbotron">
     <div class="container">
-        <h2>
+        <h1>
             Plating
-        </h2>
+        </h1>
         <p>
             Barcodes as a service.
         </p>
@@ -24,12 +24,21 @@
         </h2>
         <p>
             Using the address bar of your browser:<br/>
-            Add <code>/barcode/{your content}</code> to the end of this page's URL, where {your content} is the text you would like encoded.<br/><br/>
+            Add <code>/barcode/{your content}/{barcode format}</code> to the end of this page's URL, where {your content} is the text you would like encoded and {format} is one of the supported barcode types. Code128 is the default format.<br/><br/>
             For example: <a href="barcode/helloworld"><pre>plating.azurewebsites.net/barcode/helloworld</pre></a>
         </p>
     </div>
 
     <div class="col-md-6">
-
+        <h2>
+            Format
+        </h2>
+        <p>
+            The following barcode formats are supported:
+            <ul>
+                <li><code>code128</code> (Code 128)</li>
+                <li><code>qr</code> (QR Code)</li>
+            </ul>
+        </p>
     </div>
 </div>
