@@ -12,7 +12,7 @@ namespace Plating.Barcoding
     {
         private BarcodeWriter _writer;
 
-        public Barcoder(string format = "code128", int height = 150, int width = 200)
+        public Barcoder(string format = "code128", int height = 100, int width = 300)
         {
             _writer = new BarcodeWriter
             {
